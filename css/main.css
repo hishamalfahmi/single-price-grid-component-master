@@ -163,3 +163,10 @@ main .cards .card:last-child p {
   opacity: 70%;
   padding-right: 4rem;
 }
+
+@media screen and (min-width: 39rem) and (max-width: 77rem) {
+  main .cards .card:last-child p {
+    padding-right: 1rem;
+  }
+}
+
