@@ -1,0 +1,165 @@
+:root {
+  --Cyan: hsl(179, 61%, 44%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(179, 47%, 52%);
+  --border-radius: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--Light-Gray);
+}
+
+main .cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  max-height: 95vh;
+  box-shadow: 0 0 0.8rem #ddd;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 40rem) {
+  main .cards {
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    grid-template-areas: "1";
+    max-width: 650px;
+  }
+}
+
+main .cards .card {
+  max-height: 275px;
+  min-width: 275px;
+  max-width: 95vw;
+  padding: 2rem;
+}
+@media screen and (max-width: 39rem) {
+  main .cards .card {
+    width: 320px;
+    padding: 1.5rem;
+  }
+}
+
+main .cards .card:first-child {
+  background-color: #fff;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+@media screen and (min-width: 40rem) {
+  main .cards .card:first-child {
+    grid-column: span 2;
+  }
+}
+
+main .cards .card:first-child h1 {
+  font-size: 1.3rem;
+  color: var(--Cyan);
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 40rem) {
+  main .cards .card:first-child h1 {
+    font-size: 1.5rem;
+  }
+}
+
+main .cards .card:first-child h2 {
+  font-size: 1rem;
+  color: var(--Bright-Yellow);
+  margin-bottom: 1rem;
+}
+
+main .cards .card:first-child p {
+  font-size: 1rem;
+  color: var(--Cyan);
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+}
+
+main .cards .card:nth-child(2) {
+  background-color: var(--Cyan);
+}
+@media screen and (min-width: 40rem) {
+  main .cards .card:nth-child(2) {
+    border-bottom-left-radius: var(--border-radius);
+  }
+}
+
+main .cards .card:nth-child(2) h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+main .cards .card:nth-child(2) div:first-of-type {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+main .cards .card:nth-child(2) div:first-of-type > span {
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main .cards .card:nth-child(2) div:first-of-type > p {
+  opacity: 60%;
+}
+
+main .cards .card:nth-child(2) > p {
+  color: #fff;
+}
+
+main .cards .card:nth-child(2) .yellow-btn {
+  background-color: var(--Bright-Yellow);
+  color: #fff;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.077);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+main .cards .card:last-child {
+  background-color: var(--Grayish-Blue);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+@media screen and (min-width: 40rem) {
+  main .cards .card:last-child {
+    border-bottom-left-radius: 0;
+  }
+}
+
+main .cards .card:last-child h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+main .cards .card:last-child p {
+  color: #fff;
+  opacity: 70%;
+  padding-right: 4rem;
+}
